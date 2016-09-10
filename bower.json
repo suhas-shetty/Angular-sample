@@ -1,0 +1,20 @@
+{
+  "name": "angular-sample",
+  "description": "sample angular app",
+  "main": "app.js",
+  "authors": [
+    "suhas"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/suhas-shetty/angular-sample",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "scripts/bower_components",
+    "test",
+    "tests"
+  ]
+}
