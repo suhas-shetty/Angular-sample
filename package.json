@@ -1,0 +1,25 @@
+{
+  "name": "angular-sample",
+  "version": "1.0.0",
+  "description": "sample angular app",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhas-shetty/angular-sample.git"
+  },
+  "author": "suhas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suhas-shetty/angular-sample/issues"
+  },
+  "homepage": "https://github.com/suhas-shetty/angular-sample#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}
