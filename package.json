@@ -21,6 +21,7 @@
   "homepage": "https://github.com/suhas-shetty/angular-sample#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-banner": "^0.6.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-wiredep": "^3.0.1"
   }
