@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/suhas-shetty/angular-sample#readme",
   "devDependencies": {
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-wiredep": "^3.0.1"
   }
 }
