@@ -1,1 +1,16 @@
-var sample = angular.module('sample', []);
+var sample = angular.module('sample', [
+	'home'
+]);
+
+sample.config(
+	function($routeProvider){
+		$routeProvider
+		.when('/home', {
+			templateUrl: env.baseUrl + 'app/home/views/home.html',
+			controller: 'homeController'
+		})
+		.otherwise({
+			redirectTo: '/home'
+		});
+	}
+);
