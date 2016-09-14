@@ -7,7 +7,10 @@
 		<link rel="stylesheet" href="scripts/bower_components/angular-material/angular-material.css" />
 		<!-- endbower -->
 	</head>
-	<body>
+	<body flex layout="column">
+		<div flex class="view-container" layout="column">
+			<div ng-view flex layout="column"></div>
+		</div>
 		<!-- bower:js -->
 		<script src="scripts/bower_components/angular/angular.js"></script>
 		<script src="scripts/bower_components/angular-animate/angular-animate.js"></script>
@@ -20,6 +23,7 @@
 
 		<script type="text/javascript" src="app/app.js"></script>
 		<script type="text/javascript" src="app/config.js"></script>
+		<script type="text/javascript" src="app/directives.js"></script>
 
 		<!-- home -->
 		<script type="text/javascript" src="app/home/home.js"></script>
