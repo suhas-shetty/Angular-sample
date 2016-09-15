@@ -2,48 +2,43 @@
 
 	"use strict";
 
-	var directives = angular.module('directives', []);
+	var directives = angular.module('directives', ['ngMaterial']);
 
 	var sideMenuDirective = function(){
 		return{
 			restrict: 'E',
 			scope: true,
-			templateUrl: env.baseUrl + '/app/common-views/sidemenu.html',
-			controller: function($scope){
-				this.open = function(id){
-					$mdSidenav(id).toggle();
-				};
-			},
-			// controllerAs: 'sideMenuCtrl'
+			templateUrl: env.baseUrl + '/app/common-views/sidemenu.html'
 		};
 	};
 
 	sideMenuDirective.$inject = [];
 	directives.directive('sideMenu', sideMenuDirective);
 
-	var toolBarDirective = function(){
+	var toolBarDirective = function($mdSidenav){
 		return{
 			restrict: 'E',
 			scope: true,
 			templateUrl: env.baseUrl + '/app/common-views/toolbar.html',
 			require: 'sideMenu',
-			// controller: function($scope, sideMenuCtrl){
-			// 	this.openSideMenu = function(id){
-			// 		sideMenuCtrl.open(id);
-			// 		console.log("toolbar");
-			// 	};
-			// },
-			link: function(scope, element, attrs, sideMenuCtrl){
-				scope.openSideMenu = function(id){
-					sideMenuCtrl.open(id);
-					console.log("toolbar");
+			controller: function($scope){
+				var ctrl = this;
+				ctrl.openSideMenu = function(id){
+					$mdSidenav(id).toggle().then(function () {
+			        	console.log("toggle " + id + " is done");
+			        	if($mdSidenav(id).isOpen()){
+				        	ctrl.showMenuButton = false;
+				        }else{
+				        	ctrl.showMenuButton = true;
+				        }
+			        });
 				};
 			},
 			controllerAs: 'toolBarCtrl'
 		};
 	};
 
-	toolBarDirective.$inject = [];
+	toolBarDirective.$inject = ['$mdSidenav'];
 	directives.directive('toolbar', toolBarDirective);
 
 })();

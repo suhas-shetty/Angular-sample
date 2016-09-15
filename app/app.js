@@ -1,6 +1,7 @@
 var sample = angular.module('sample', [
 	'ngRoute',
 	'directives',
+	'services',
 	'home'
 ]);
 
