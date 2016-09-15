@@ -1,7 +1,14 @@
-var homeControllers = angular.module('homeControllers', []);
+( function() {
 
-homeControllers.controller('homeController', [ '$scope',
-	function($scope){
+	"use strict";
 
-	}
-]);
+	var homeControllers = angular.module('homeControllers', []);
+
+	var homeController = function($scope){
+		
+	};
+
+	homeController.$inject = ['$scope'];
+	homeControllers.controller('homeController', homeController);
+
+})();

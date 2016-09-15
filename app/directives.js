@@ -26,11 +26,6 @@
 				ctrl.openSideMenu = function(id){
 					$mdSidenav(id).toggle().then(function () {
 			        	console.log("toggle " + id + " is done");
-			        	if($mdSidenav(id).isOpen()){
-				        	ctrl.showMenuButton = false;
-				        }else{
-				        	ctrl.showMenuButton = true;
-				        }
 			        });
 				};
 			},

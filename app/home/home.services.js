@@ -1,9 +1,16 @@
-var homeServices = angular.module('homeServices', ['ngResource']);
+( function() {
 
-homeServices.factory('Home', ['$resource', 
-	function($resource){
+	"use strict";
+
+	var homeServices = angular.module('homeServices', ['ngResource']);
+
+	var homeService = function($resource){
 		return {
 			
 		}
-	}
-]);
+	};
+
+	homeService.$inject = ['$resource'];
+	homeServices.factory('Home', homeService);
+
+})();
