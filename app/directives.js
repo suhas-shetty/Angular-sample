@@ -13,14 +13,13 @@
 	};
 
 	sideMenuDirective.$inject = [];
-	directives.directive('sideMenu', sideMenuDirective);
+	directives.directive('asSidemenu', sideMenuDirective);
 
 	var toolBarDirective = function($mdSidenav){
 		return{
 			restrict: 'E',
 			scope: true,
 			templateUrl: env.baseUrl + '/app/common-views/toolbar.html',
-			require: 'sideMenu',
 			controller: function($scope){
 				var ctrl = this;
 				ctrl.openSideMenu = function(id){
@@ -34,6 +33,6 @@
 	};
 
 	toolBarDirective.$inject = ['$mdSidenav'];
-	directives.directive('toolbar', toolBarDirective);
+	directives.directive('asToolbar', toolBarDirective);
 
 })();

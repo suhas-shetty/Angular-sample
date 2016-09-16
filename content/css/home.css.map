@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "home.css",
+	"sources": [
+		"../sass/home.scss"
+	],
+	"mappings": "AAAA,AACC,UADS,CACT,aAAa,CAAA;EACZ,eAAe,EAAE,YAAa;CAI9B;;AANF,AAGE,UAHQ,CACT,aAAa,CAEZ,UAAU,CAAA;EACT,MAAM,EAAE,KAAM;CACd",
+	"names": []
+}

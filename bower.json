@@ -21,6 +21,15 @@
     "angular": "~1.5.8",
     "angular-material": "~1.1.1",
     "angular-route": "~1.5.8",
-    "angular-resource": "~1.5.8"
+    "angular-resource": "~1.5.8",
+    "font-awesome": "~4.6.3",
+    "ng-dialog": "~0.6.4"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    }
   }
 }

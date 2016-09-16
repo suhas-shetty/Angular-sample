@@ -3,14 +3,25 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Angular Sample</title>
+		
 		<!-- bower:css -->
 		<link rel="stylesheet" href="scripts/bower_components/angular-material/angular-material.css" />
+		<link rel="stylesheet" href="scripts/bower_components/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="scripts/bower_components/ng-dialog/css/ngDialog.css" />
+		<link rel="stylesheet" href="scripts/bower_components/ng-dialog/css/ngDialog-theme-default.css" />
 		<!-- endbower -->
+
+		<link rel="stylesheet" href="content/css/app.css" />
+		<link rel="stylesheet" href="content/css/home.css" />
 	</head>
-	<body flex layout="column">
+	<body flex layout="column" ng-controller="mainController as mainCtrl">
 		<div flex class="view-container" layout="column">
+			<div class="loadingScreen" ng-show="mainCtrl.showLoadingScreen" layout="row" layout-sm="column" layout-align="space-around">
+				<md-progress-circular md-mode="indeterminate"></md-progress-circular>
+			</div>
 			<div ng-view flex layout="column"></div>
 		</div>
+		
 		<!-- bower:js -->
 		<script src="scripts/bower_components/angular/angular.js"></script>
 		<script src="scripts/bower_components/angular-animate/angular-animate.js"></script>
@@ -19,10 +30,12 @@
 		<script src="scripts/bower_components/angular-material/angular-material.js"></script>
 		<script src="scripts/bower_components/angular-route/angular-route.js"></script>
 		<script src="scripts/bower_components/angular-resource/angular-resource.js"></script>
+		<script src="scripts/bower_components/ng-dialog/js/ngDialog.js"></script>
 		<!-- endbower -->
 
 		<script type="text/javascript" src="app/app.js"></script>
 		<script type="text/javascript" src="app/config.js"></script>
+		<script type="text/javascript" src="app/utils.js"></script>
 		<script type="text/javascript" src="app/directives.js"></script>
 		<script type="text/javascript" src="app/services.js"></script>
 

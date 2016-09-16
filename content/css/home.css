@@ -1,0 +1,9 @@
+.home-page .home-content {
+  justify-content: space-around;
+}
+
+.home-page .home-content .each-item {
+  height: 200px;
+}
+
+/*# sourceMappingURL=home.css.map */

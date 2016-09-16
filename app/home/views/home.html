@@ -1,11 +1,13 @@
-<div flex layout="row">
-	<side-menu></side-menu>
+<div flex layout="row" class="home-page">
+	<as-sidemenu></as-sidemenu>
 	<div flex layout="column">
-		<toolbar></toolbar>
-		<div flex layout="row">
-			<div>hello world</div>
-			<div>hello world</div>
-			<div>hello world</div>
+		<as-toolbar></as-toolbar>
+		<div flex layout="column" class="home-wrapper">
+			<div flex layout="row" class="home-content">
+				<div class="each-item">hello world</div>
+				<div class="each-item">hello world</div>
+				<div class="each-item">hello world</div>
+			</div>
 		</div>
 	</div>
 </div>

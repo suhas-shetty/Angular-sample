@@ -1,5 +1,6 @@
 var sample = angular.module('sample', [
 	'ngRoute',
+	'ngDialog',
 	'directives',
 	'services',
 	'home'
@@ -17,3 +18,18 @@ sample.config(
 		});
 	}
 );
+
+/**
+ * mainController function for the app
+ */
+var mainController = function(){
+	var ctrl = this;
+	ctrl.showLoadingScreen = false;
+
+	ctrl.toggleLoadingScreen = function(state){
+		ctrl.showLoadingScreen = state;
+	};
+};
+
+mainController.$inject = [];
+sample.controller('mainController', mainController);

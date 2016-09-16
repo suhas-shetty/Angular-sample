@@ -1,0 +1,25 @@
+$primarycolor: #eeffcc;
+$iconSize: 20px;
+
+body{
+	background : $primarycolor;
+}
+
+.md-sidenav{
+	height: 100%;
+}
+
+i.fa{
+	font-size: $iconSize;
+}
+
+.loadingScreen{
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(243, 237, 237, 0.5);
+    z-index: 99;
+    md-progress-circular{
+    	top: 50%;
+    }
+}

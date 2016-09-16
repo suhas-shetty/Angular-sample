@@ -2,6 +2,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-wiredep');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-banner');
+	grunt.loadNpmTasks('grunt-sass');
 
 	grunt.initConfig({
 		wiredep: {
@@ -67,13 +68,29 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		sass: {
+			options : {
+				sourceMap: true,
+				outputStyle: 'expanded'
+			},
+			dist: {
+				files: {
+					'./content/css/app.css' : './content/sass/app.scss',
+					'./content/css/home.css' : './content/sass/home.scss'
+				}
+			}
+		},
 		watch: {
-			bowerdep:{
+			bowerdep: {
 				files: ['scripts/bower_components/**/*'],
 				tasks: ['wiredep']
+			},
+			sass: {
+				files: ['./content/sass/*.scss'],
+				tasks: ['sass:dist']
 			}
 		}
 	});
 	grunt.registerTask('banner', ['usebanner']);
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['sass:dist', 'watch']);
 };
